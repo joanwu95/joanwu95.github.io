@@ -1,0 +1,101 @@
+/* ===============================
+   Global typography
+   =============================== */
+
+body {
+  font-family: "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+  font-size: 17px;
+  line-height: 1.75;
+  color: #1f2933;
+  background-color: #f8fafc;
+}
+
+/* ===============================
+   Navbar
+   =============================== */
+
+.navbar,
+header {
+  background-color: #0f172a !important;
+}
+
+.navbar a,
+header a {
+  color: #f8fafc !important;
+  font-weight: 600;
+}
+
+.navbar-brand {
+  font-size: 1.35rem !important;
+  font-weight: 700 !important;
+}
+
+/* ===============================
+   Homepage name / title
+   =============================== */
+
+h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 650;
+  color: #1e293b;
+}
+
+h3 {
+  font-size: 1.45rem;
+  font-weight: 600;
+  color: #334155;
+}
+
+/* ===============================
+   Paragraphs
+   =============================== */
+
+p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+/* ===============================
+   Links
+   =============================== */
+
+a {
+  color: #2563eb;
+}
+
+a:hover {
+  color: #1d4ed8;
+}
+
+/* ===============================
+   Section background
+   =============================== */
+
+section {
+  background-color: #f8fafc;
+}
+
+/* ===============================
+   Cards / blocks
+   =============================== */
+
+.card,
+.article-container,
+.resume-section {
+  border-radius: 16px;
+}
+
+/* ===============================
+   Footer
+   =============================== */
+
+footer {
+  background-color: #0f172a;
+  color: #cbd5e1;
+}
