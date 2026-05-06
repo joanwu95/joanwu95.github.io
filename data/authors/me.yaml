@@ -12,10 +12,8 @@ name:
 
 postnominals: []
 
-status:
-  icon: "🤖"
 
-role: Qiong Wu · Ph.D. Candidate in Soft Robotics
+role: Ph.D. Candidate in Mechanical Engineering
 
 bio: |
   I am a Ph.D. candidate working on soft robotic grippers, intrinsic force sensing,
@@ -26,7 +24,7 @@ bio: |
   and machine learning.
 
 affiliations:
-  - name: Your University
+  - name: Harbin Institute of Technology (Shenzhen)
     url: ''
 
 links:
@@ -54,7 +52,7 @@ interests:
 
 education:
   - degree: Ph.D. in Mechanical Engineering
-    institution: Your University
+    institution: Harbin Institute of Technology (Shenzhen)
     start: 2021-09-01
     end: 2026-06-30
     summary: |
@@ -62,14 +60,14 @@ education:
       and physics-guided learning for flexible robotic grippers.
 
   - degree: M.S. in Mechanical Engineering
-    institution: Your Previous University
-    start: 2018-09-01
+    institution: Harbin Institute of Technology (Shenzhen)
+    start: 2019-09-01
     end: 2021-06-30
 
   - degree: B.S. in Mechanical Engineering
-    institution: Your Previous University
-    start: 2014-09-01
-    end: 2018-06-30
+    institution: Beihang University
+    start: 2013-09-01
+    end: 2017-06-30
 
 experience: []
 
