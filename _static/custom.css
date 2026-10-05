@@ -1,0 +1,624 @@
+/* 白色背景的 PiYG 主题 */
+:root {
+  --wq-white: #ffffff;
+  --wq-text: #263226;
+  --wq-muted: #667266;
+
+  /* PiYG 绿色色阶 */
+  --wq-green-900: #276419;
+  --wq-green-700: #4d9221;
+  --wq-green-500: #7fbc41;
+  --wq-green-300: #b8e186;
+  --wq-green-100: #e6f5d0;
+
+  /* PiYG 粉色色阶，仅作少量强调 */
+  --wq-pink-700: #c51b7d;
+  --wq-pink-500: #de77ae;
+  --wq-pink-300: #f1b6da;
+  --wq-pink-100: #fde0ef;
+
+  --wq-border: rgb(77 146 33 / 28%);
+  --wq-green-wash: rgb(230 245 208 / 58%);
+  --wq-green-soft: rgb(184 225 134 / 32%);
+  --wq-pink-soft: rgb(241 182 218 / 28%);
+}
+
+html,
+body {
+  background: var(--wq-white) !important;
+  color: var(--wq-text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue",
+    Arial, "Microsoft YaHei", sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+body {
+  --pst-color-background: var(--wq-white);
+  --pst-color-on-background: var(--wq-white);
+  --pst-color-surface: var(--wq-green-wash);
+  --pst-color-on-surface: var(--wq-text);
+  --pst-color-text-base: var(--wq-text);
+  --pst-color-text-muted: var(--wq-muted);
+  --pst-color-primary: var(--wq-green-700);
+  --pst-color-link: var(--wq-green-700);
+  --pst-color-link-hover: var(--wq-text);
+  --pst-color-border: var(--wq-border);
+  --pst-color-shadow: rgb(39 100 25 / 12%);
+}
+
+/* 无论浏览器之前保存了亮色还是暗色模式，都统一显示为白底 PiYG。 */
+html[data-theme="light"],
+html[data-theme="dark"] {
+  color-scheme: light;
+  --pst-color-background: var(--wq-white);
+  --pst-color-on-background: var(--wq-white);
+  --pst-color-surface: var(--wq-green-wash);
+  --pst-color-on-surface: var(--wq-text);
+  --pst-color-text-base: var(--wq-text);
+  --pst-color-text-muted: var(--wq-muted);
+  --pst-color-muted: var(--wq-muted);
+  --pst-color-primary: var(--wq-green-700);
+  --pst-color-link: var(--wq-green-700);
+  --pst-color-link-hover: var(--wq-text);
+  --pst-color-border: var(--wq-border);
+}
+
+/* 隐藏横跨全页的空顶栏。 */
+.bd-header {
+  display: none !important;
+}
+
+/* 顶部色带只位于中间正文区域，使用均匀的半透明浅绿色。 */
+.bd-header-article {
+  min-height: 48px;
+  border-bottom: 1px solid rgb(77 146 33 / 22%);
+  background: rgb(230 245 208 / 48%) !important;
+}
+
+/* 左侧导航使用纯白背景。 */
+.bd-sidebar-primary {
+  border-right: 1px solid var(--wq-border);
+  background: var(--wq-white) !important;
+  color: var(--wq-text);
+}
+
+.bd-sidebar-primary .sidebar-header-items,
+.bd-sidebar-primary .sidebar-primary-items__start,
+.bd-sidebar-primary .sidebar-primary-items__end,
+.bd-sidebar-primary .sidebar-primary__section,
+.bd-sidebar-primary .sidebar-primary-item {
+  background: transparent !important;
+}
+
+.bd-sidebar-primary a,
+.bd-sidebar-primary .nav-link,
+.bd-sidebar-primary .caption-text {
+  color: var(--wq-text) !important;
+}
+
+.bd-sidebar-primary .caption-text {
+  font-weight: 750;
+}
+
+.bd-sidebar-primary .nav-link.active,
+.bd-sidebar-primary li.current > a,
+.bd-sidebar-primary a.current {
+  border-left-color: var(--wq-pink-700);
+  background: var(--wq-pink-soft);
+  color: var(--wq-pink-700) !important;
+}
+
+.bd-sidebar-primary .nav-link:hover {
+  background: rgb(184 225 134 / 42%);
+  color: var(--wq-text) !important;
+}
+
+.bd-sidebar-primary .navbar-brand {
+  width: 66.666%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.navbar-brand img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  max-height: none;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 28px;
+  box-shadow: 0 8px 22px rgb(39 100 25 / 13%);
+}
+
+.sidebar-author-name {
+  display: block;
+  margin: 0.8rem 0 0.2rem;
+  color: var(--wq-text);
+  font-size: 1.18rem;
+  font-weight: 750;
+  line-height: 1.3;
+  text-align: center;
+  text-decoration: none !important;
+}
+
+.sidebar-author-name:hover,
+.sidebar-author-name:focus-visible {
+  color: var(--wq-pink-700);
+}
+
+.sidebar-welcome {
+  margin: 0 0 1rem;
+  color: var(--wq-muted);
+  font-size: 0.92rem;
+  font-weight: 500;
+  line-height: 1.3;
+  text-align: center;
+}
+
+/* 中间正文保持白色。 */
+.bd-main .bd-content .bd-article-container {
+  min-width: 0;
+  width: 100%;
+  max-width: 100% !important;
+}
+
+.bd-article,
+.bd-main,
+.bd-content {
+  background: var(--wq-white) !important;
+  color: var(--wq-text);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--wq-text);
+  font-family: inherit;
+}
+
+/* 覆盖 Jupyter Book 对正文标题设置的暗色模式浅色文字。 */
+.bd-article-container h1,
+.bd-article-container h2,
+.bd-article-container h3,
+.bd-article-container h4,
+.bd-article-container h5,
+.bd-article-container h6,
+.bd-article-container p.caption {
+  color: var(--wq-text) !important;
+}
+
+h2 {
+  color: var(--wq-text);
+  border-bottom-color: rgb(77 146 33 / 25%);
+}
+
+a {
+  color: var(--wq-green-700);
+}
+
+a:hover {
+  color: var(--wq-pink-700);
+}
+
+/* 右侧目录以绿色为主，当前条目使用少量粉色。 */
+.bd-sidebar-secondary {
+  border-left: 1px solid rgb(77 146 33 / 18%);
+  background: rgb(230 245 208 / 24%) !important;
+}
+
+/* 右侧内容纵向排列：页内目录在上，Tags 汇总在下。 */
+.bd-sidebar-secondary .sidebar-secondary__inner,
+.bd-sidebar-secondary .sidebar-secondary-items {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: stretch !important;
+  width: 100%;
+}
+
+.bd-sidebar-secondary .sidebar-secondary-item,
+.bd-sidebar-secondary .toc-item,
+.bd-sidebar-secondary nav.page-toc,
+.sidebar-tag-cloud {
+  width: 100%;
+}
+
+.bd-sidebar-secondary .onthispage {
+  color: var(--wq-text);
+  font-weight: 700;
+}
+
+.bd-sidebar-secondary .toc-entry a {
+  color: var(--wq-muted);
+}
+
+.bd-sidebar-secondary .toc-entry a:hover {
+  color: var(--wq-green-700);
+}
+
+.bd-sidebar-secondary .toc-entry a.active {
+  box-shadow: inset 3px 0 0 var(--wq-pink-500) !important;
+  color: var(--wq-pink-700) !important;
+}
+
+.tag,
+.page-tag,
+.content-tag,
+.tag-cloud-item {
+  display: inline-block;
+  margin: 0.16rem 0.12rem;
+  padding: 0.18rem 0.48rem;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  line-height: 1.35;
+  text-decoration: none !important;
+  cursor: pointer;
+}
+
+.page-tags {
+  margin: 0.25rem 0 1.25rem;
+}
+
+.content-tag {
+  margin-top: 0.55rem;
+}
+
+.tag-color-1 {
+  background: rgb(239 83 80 / 14%);
+  color: #c62828 !important;
+}
+
+.tag-color-2 {
+  background: rgb(255 152 0 / 15%);
+  color: #c66a00 !important;
+}
+
+.tag-color-3 {
+  background: rgb(251 192 45 / 18%);
+  color: #8d6e00 !important;
+}
+
+.tag-color-4 {
+  background: rgb(127 188 65 / 17%);
+  color: var(--wq-text) !important;
+}
+
+.tag-color-5 {
+  background: rgb(66 165 245 / 14%);
+  color: #1565c0 !important;
+}
+
+.tag-color-6 {
+  background: rgb(171 71 188 / 14%);
+  color: #7b1fa2 !important;
+}
+
+.sidebar-tag-cloud {
+  margin-top: 1rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--wq-border);
+}
+
+.sidebar-tag-cloud h3 {
+  margin: 0 0 0.55rem;
+  color: var(--wq-text);
+  font-size: 0.95rem;
+}
+
+.sidebar-tag-cloud h3 a {
+  color: var(--wq-text);
+  text-decoration: none;
+}
+
+.sidebar-tag-cloud__items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.18rem;
+}
+
+.tag-cloud-item:hover,
+.page-tag:hover,
+.content-tag:hover,
+.tag-cloud-item.selected {
+  filter: saturate(1.25);
+  box-shadow: 0 2px 8px rgb(39 100 25 / 13%);
+  transform: translateY(-1px);
+}
+
+.tag-index-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin: 1rem 0 2rem;
+}
+
+.tag-results {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.tag-results-title {
+  margin-bottom: 0.25rem;
+}
+
+.tag-result-card {
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--wq-border);
+  border-radius: 6px;
+  background: rgb(230 245 208 / 26%);
+}
+
+.tag-result-card h4 {
+  margin: 0 0 0.35rem;
+}
+
+.tag-result-card p {
+  margin-bottom: 0.55rem;
+}
+
+.tag-result-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.15rem;
+}
+
+/* 卡片和文本块始终使用默认浅绿色，不使用粉色背景。 */
+.sd-card {
+  border: 1px solid var(--wq-border) !important;
+  background: rgb(230 245 208 / 26%) !important;
+  color: var(--wq-text);
+  box-shadow: 0 6px 18px rgb(39 100 25 / 7%) !important;
+}
+
+.sd-card:hover {
+  border-color: rgb(77 146 33 / 42%) !important;
+  background: rgb(230 245 208 / 42%) !important;
+}
+
+.sd-card-title {
+  color: var(--wq-text);
+}
+
+/* 所有提示文本块统一使用浅绿色背景。 */
+.admonition {
+  border-color: var(--wq-green-500) !important;
+  background: rgb(230 245 208 / 26%) !important;
+  box-shadow: none !important;
+}
+
+.admonition-title {
+  background: rgb(230 245 208 / 58%) !important;
+  color: var(--wq-text) !important;
+}
+
+pre,
+div.highlight {
+  border: 1px solid var(--wq-border);
+  background: rgb(230 245 208 / 24%) !important;
+}
+
+code,
+pre code {
+  color: #355f28;
+}
+
+/* 覆盖 Pygments 暗色语法高亮，避免白底上出现白色代码。 */
+html[data-theme="light"] .highlight,
+html[data-theme="dark"] .highlight {
+  background: rgb(230 245 208 / 24%) !important;
+  color: var(--wq-text) !important;
+}
+
+html[data-theme="light"] .highlight .n,
+html[data-theme="light"] .highlight .nn,
+html[data-theme="light"] .highlight .nx,
+html[data-theme="light"] .highlight .p,
+html[data-theme="light"] .highlight .w,
+html[data-theme="dark"] .highlight .n,
+html[data-theme="dark"] .highlight .nn,
+html[data-theme="dark"] .highlight .nx,
+html[data-theme="dark"] .highlight .p,
+html[data-theme="dark"] .highlight .w {
+  color: var(--wq-text) !important;
+}
+
+html[data-theme="light"] .highlight .k,
+html[data-theme="light"] .highlight .kc,
+html[data-theme="light"] .highlight .kd,
+html[data-theme="light"] .highlight .kn,
+html[data-theme="light"] .highlight .kp,
+html[data-theme="light"] .highlight .kr,
+html[data-theme="light"] .highlight .ow,
+html[data-theme="dark"] .highlight .k,
+html[data-theme="dark"] .highlight .kc,
+html[data-theme="dark"] .highlight .kd,
+html[data-theme="dark"] .highlight .kn,
+html[data-theme="dark"] .highlight .kp,
+html[data-theme="dark"] .highlight .kr,
+html[data-theme="dark"] .highlight .ow {
+  color: var(--wq-pink-700) !important;
+}
+
+html[data-theme="light"] .highlight .s,
+html[data-theme="light"] .highlight .s1,
+html[data-theme="light"] .highlight .s2,
+html[data-theme="light"] .highlight .sa,
+html[data-theme="light"] .highlight .se,
+html[data-theme="dark"] .highlight .s,
+html[data-theme="dark"] .highlight .s1,
+html[data-theme="dark"] .highlight .s2,
+html[data-theme="dark"] .highlight .sa,
+html[data-theme="dark"] .highlight .se {
+  color: var(--wq-green-700) !important;
+}
+
+html[data-theme="light"] .highlight .m,
+html[data-theme="light"] .highlight .mi,
+html[data-theme="light"] .highlight .mf,
+html[data-theme="light"] .highlight .nb,
+html[data-theme="dark"] .highlight .m,
+html[data-theme="dark"] .highlight .mi,
+html[data-theme="dark"] .highlight .mf,
+html[data-theme="dark"] .highlight .nb {
+  color: #8e0152 !important;
+}
+
+html[data-theme="light"] .highlight .c,
+html[data-theme="light"] .highlight .c1,
+html[data-theme="light"] .highlight .cm,
+html[data-theme="dark"] .highlight .c,
+html[data-theme="dark"] .highlight .c1,
+html[data-theme="dark"] .highlight .cm {
+  color: var(--wq-muted) !important;
+}
+
+/* 本主题固定使用亮色，隐藏不再需要的明暗模式切换按钮。 */
+.theme-switch-button {
+  display: none !important;
+}
+
+/* 中英文切换按钮位于中间内容区顶部的浅绿色工具栏中。 */
+.bd-header-article .header-article-items__end,
+.bd-header-article .header-article-item,
+.bd-header-article .article-header-buttons {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+.bd-header-article .article-header-buttons {
+  gap: 0.25rem;
+}
+
+.language-switch {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.35rem;
+  height: 2rem;
+  margin-left: 0.2rem;
+  padding: 0 0.58rem;
+  border: 1px solid rgb(77 146 33 / 34%);
+  border-radius: 999px;
+  background: rgb(255 255 255 / 70%);
+  color: var(--wq-text) !important;
+  font-size: 0.8rem;
+  font-weight: 750;
+  line-height: 1;
+  letter-spacing: 0.04em;
+  text-decoration: none !important;
+}
+
+.language-switch:hover,
+.language-switch:focus-visible {
+  border-color: rgb(197 27 125 / 48%);
+  background: rgb(253 224 239 / 70%);
+  color: var(--wq-pink-700) !important;
+}
+
+code.literal {
+  border-color: rgb(77 146 33 / 20%);
+  background: rgb(230 245 208 / 32%);
+  color: #355f28;
+}
+
+.search-button,
+.bd-search,
+.bd-search input,
+.search-button__button {
+  border-color: rgb(77 146 33 / 30%) !important;
+  background: rgb(255 255 255 / 72%) !important;
+  color: var(--wq-text) !important;
+}
+
+.search-button__button:hover {
+  background: rgb(184 225 134 / 35%) !important;
+}
+
+.bd-footer,
+.prev-next-area {
+  border-color: var(--wq-border);
+  background: rgb(230 245 208 / 20%);
+  color: var(--wq-muted);
+}
+
+@media (max-width: 959px) {
+  .bd-main .bd-content .bd-article-container {
+    max-width: 100% !important;
+  }
+
+  .bd-sidebar-secondary {
+    position: static;
+    height: auto;
+  }
+}
+
+/* 桌面端右侧目录固定在视口中。 */
+/* 自适应三栏：正文与右侧目录共同参与 Grid 排版。 */
+@media (min-width: 1200px) {
+  .bd-main .bd-content {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) clamp(15rem, 22vw, 21rem);
+    align-items: start;
+    width: 100%;
+  }
+
+  .bd-main .bd-content .bd-article-container {
+    grid-column: 1;
+    min-width: 0;
+    width: auto;
+    max-width: none !important;
+  }
+
+  .bd-sidebar-secondary {
+    position: sticky !important;
+    grid-column: 2;
+    top: 0 !important;
+    right: auto !important;
+    bottom: auto !important;
+    width: auto !important;
+    min-width: 0;
+    height: 100vh !important;
+    max-height: none !important;
+    overflow-y: auto !important;
+    padding-top: 0 !important;
+    transition: none !important;
+  }
+
+  .bd-sidebar-secondary.is-viewport-fixed {
+    position: fixed !important;
+    left: var(--wq-secondary-left) !important;
+    width: var(--wq-secondary-width) !important;
+  }
+
+  .bd-sidebar-secondary.hide:not(:hover) {
+    max-height: none !important;
+    overflow-y: auto !important;
+    box-shadow: none !important;
+  }
+
+  .bd-sidebar-secondary.hide:not(:hover) nav.page-toc {
+    opacity: 1 !important;
+  }
+
+  .bd-sidebar-secondary.hide:not(:hover) .onthispage::after {
+    content: none !important;
+  }
+}
+
+/* 小窗口继续使用主题自带的目录抽屉。 */
+@media (max-width: 1199px) {
+  .bd-main .bd-content {
+    display: block !important;
+  }
+
+  .bd-main .bd-content .bd-article-container {
+    width: 100%;
+    max-width: 100% !important;
+  }
+}

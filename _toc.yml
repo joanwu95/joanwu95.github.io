@@ -1,0 +1,57 @@
+format: jb-book
+root: index
+
+parts:
+  - caption: 研究
+    chapters:
+      - file: research
+        title: 课题研究
+      - file: projects
+        title: 科研项目
+
+  - caption: 笔记与心得
+    chapters:
+      - file: notes
+        title: 学习笔记
+      - file: blog
+        title: 学习心得
+
+  - caption: 关于我
+    chapters:
+      - file: cv
+        title: 个人简历
+      - file: about
+        title: 其他
+
+  - caption: 索引
+    chapters:
+      - file: tags
+        title: 标签
+
+  - caption: Research
+    chapters:
+      - file: en/index
+        title: Home
+      - file: en/research
+        title: Research overview
+      - file: en/projects
+        title: Projects & Demos
+
+  - caption: Notes & Writing
+    chapters:
+      - file: en/notes
+        title: Technical notes
+      - file: en/blog
+        title: Blog
+
+  - caption: About
+    chapters:
+      - file: en/cv
+        title: Curriculum Vitae
+      - file: en/about
+        title: About me
+
+  - caption: Index
+    chapters:
+      - file: en/tags
+        title: Tags

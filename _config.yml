@@ -1,0 +1,55 @@
+# Jupyter Book 全站配置
+title: "Qiong Wu Documentation"
+author: "Qiong Wu"
+copyright: "2026, Qiong Wu. created using Jupyter Book"
+logo: "pics/author/avat.jpg"
+
+# 这些文件是项目说明，不作为网页章节参与构建。
+exclude_patterns:
+  - "README.md"
+  - "ARCHITECTURE.md"
+  - "scripts/**"
+
+# 不自动执行页面中的代码，避免构建网站时依赖科研环境。
+execute:
+  execute_notebooks: "off"
+
+# MyST Markdown 扩展。
+parse:
+  myst_enable_extensions:
+    - colon_fence
+    - deflist
+    - dollarmath
+    - html_admonition
+    - html_image
+    - linkify
+    - substitution
+
+html:
+  favicon: "pics/author/icon.png"
+  use_repository_button: false
+  use_issues_button: false
+  home_page_in_navbar: false
+  extra_footer: |
+    <p>Soft Robotics · Force Sensing · Data-driven Modeling</p>
+
+sphinx:
+  extra_extensions:
+    - sphinx_design
+  config:
+    language: zh_CN
+    html_baseurl: "https://joanwu95.github.io/"
+    html_show_sourcelink: false
+    html_theme_options:
+      show_navbar_depth: 2
+      use_repository_button: false
+      use_issues_button: false
+      use_download_button: false
+      use_fullscreen_button: true
+      extra_footer: ""
+    html_static_path:
+      - "_static"
+    html_css_files:
+      - "custom.css"
+    html_js_files:
+      - "force-light.js"
