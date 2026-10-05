@@ -14,7 +14,10 @@ const isEnglishPage = () =>
 
 const currentLanguage = () => (isEnglishPage() ? "en" : "zh");
 
-const tagUrl = (label) => `tags.html?tag=${encodeURIComponent(label)}`;
+// Resolve navigation from the script location, including on nested note pages.
+const siteRoot = new URL('../', document.querySelector('script[src*="force-light.js"]').src);
+const languageUrl = (path) => new URL(`${isEnglishPage() ? "en/" : ""}${path}`, siteRoot).href;
+const tagUrl = (label) => `${languageUrl("tags.html")}?tag=${encodeURIComponent(label)}`;
 
 const tagColorClass = (label) => {
   const hash = [...label].reduce(
@@ -95,9 +98,8 @@ const addLanguageSwitch = () => {
     document.querySelector(".bd-header-article");
   if (!toolbar || toolbar.querySelector(".language-switch")) return;
 
-  const pageName =
-    window.location.pathname.replaceAll("\\", "/").split("/").pop() ||
-    "index.html";
+  const pagePath = window.location.pathname.slice(siteRoot.pathname.length) || "index.html";
+  const pageName = pagePath.startsWith("notes/") ? "notes.html" : pagePath.replace(/^en\//, "");
   const switchLink = document.createElement("a");
   switchLink.className = "language-switch";
   switchLink.textContent = isEnglishPage() ? "CH" : "EN";
@@ -105,16 +107,17 @@ const addLanguageSwitch = () => {
     ? "切换到中文版"
     : "Switch to the English version";
   switchLink.setAttribute("aria-label", switchLink.title);
-  switchLink.href = `${
-    isEnglishPage() ? "../" : "en/"
-  }${pageName}${translatedSearch()}${window.location.hash}`;
+  switchLink.href = new URL(
+    `${isEnglishPage() ? "" : "en/"}${pageName}${translatedSearch()}${pagePath.startsWith("notes/") ? "" : window.location.hash}`,
+    siteRoot
+  ).href;
   toolbar.appendChild(switchLink);
 };
 
 const addSidebarAuthorName = () => {
   const logo = document.querySelector(".bd-sidebar-primary .navbar-brand");
   if (!logo) return;
-  logo.href = "index.html";
+  logo.href = languageUrl("index.html");
 
   const logoItem = logo.closest(".sidebar-primary-item") || logo;
   const existing = document.querySelector(".sidebar-author-name");
@@ -122,11 +125,11 @@ const addSidebarAuthorName = () => {
 
   if (existing) {
     existing.textContent = name;
-    existing.href = "index.html";
+    existing.href = languageUrl("index.html");
   } else {
     const authorName = document.createElement("a");
     authorName.className = "sidebar-author-name";
-    authorName.href = "index.html";
+    authorName.href = languageUrl("index.html");
     authorName.setAttribute(
       "aria-label",
       isEnglishPage() ? "Go to homepage" : "返回主页"
@@ -425,7 +428,7 @@ const renderSidebarTagCloud = async () => {
 
   const heading = document.createElement("h3");
   const headingLink = document.createElement("a");
-  headingLink.href = "tags.html";
+  headingLink.href = languageUrl("tags.html");
   headingLink.textContent = isEnglishPage() ? "Tags" : "标签";
   heading.appendChild(headingLink);
   cloud.appendChild(heading);

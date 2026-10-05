@@ -1,6 +1,6 @@
 # 学习笔记
 
-[算法学习查找表](../quarto-template/notes/suanfaindex.md)
+[算法学习查找表](notes/suanfaindex.md)
 <!--
 <div class="page-tags">
   <span class="page-tag">逆问题</span>
