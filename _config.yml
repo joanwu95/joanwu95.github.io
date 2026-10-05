@@ -34,6 +34,8 @@ html:
     <p>Soft Robotics · Force Sensing · Data-driven Modeling</p>
 
 sphinx:
+  local_extensions:
+    deduplicate_scripts: _extensions
   extra_extensions:
     - sphinx_design
   config:
