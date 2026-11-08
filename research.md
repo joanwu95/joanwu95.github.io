@@ -17,14 +17,12 @@
 
 ## 学术论文
 
-- **[1]** H. Yuan, **Q. Wu**, and L. Zhou, “Concept Design and Load Capacity Analysis of a Novel Serial-Parallel Robot for the Automatic Charging of Electric Vehicles,” Electronics, vol. 9, no. 6, Art. no. 6, Jun. 2020.（中科院3区，JCR Q2，SCI收录，IF=2.9）
+- **[1]** H. Yuan, **Q. Wu**, and L. Zhou, “Concept Design and Load Capacity Analysis of a Novel Serial-Parallel Robot for the Automatic Charging of Electric Vehicles,” Electronics, vol. 9, no. 6, Art. no. 6, Jun. 2020.（中科院4区，JCR Q2，SCI收录，IF=2.9）
 - **[2]** **Q. Wu**, Z. Yi, H. Wang, and H. Yuan, “Design and Experiment of a Soft Gripper Based on Cable-Driven Continuum Structures,” in 2021 IEEE International Conference on Robotics and Biomimetics (ROBIO), Sanya, China: IEEE, Dec. 2021, pp. 637–642.（EI收录号：20221611977629）
-- **[3]** **Q. Wu**, Y. Zhang, W. Xu, and H. Yuan, “An Adaptive Gripper for On-Orbit Grasping with Rapid Capture and Force Sensing Capabilities,” Actuators, vol. 14, no. 11, p. 543, Nov. 2025. （中科院3区，JCR Q2，SCI收录，IF=2.2）
+- **[3]** **Q. Wu**, Y. Zhang, W. Xu, and H. Yuan, “An Adaptive Gripper for On-Orbit Grasping with Rapid Capture and Force Sensing Capabilities,” Actuators, vol. 14, no. 11, p. 543, Nov. 2025. （中科院3区，JCR Q2，SCI收录，IF=2.4）
 - **[4]** **Q. Wu**, J. Cao, W. Xu, and H. Yuan, “A Reconfigurable Fin-Ray Gripper with Integrated Fiber Bragg Gratings for Intrinsic Force Sensing,” Biomimetic Intelligence and Robotics. **In press.** (中科院3区，JCR Q1，SCI收录，IF=8.6)
-- **[5]** **Q. Wu**, H. Liu, W. Xu, and H. Yuan, “Contact-Force Estimation from Structural Deformation in
-Compliant Fin-Ray Grippers via Co-Rotational Modeling and Surrogate Learning,” 2026 IEEE
-International Conference on Robotics and Biomimetics (IEEE ROBIO 2026) **Submitted.** 
-- **[6]** **Q. Wu**, W. Xu, and H. Yuan, “Bridging the Sim-to-Real Gap for Intrinsic Force Sensing in Fin-Ray Soft Fingers via Physics-Guided Multi-Fidelity Learning,” IEEE Robotics and Automation Letters. **In submitting.**
+- **[5]** **Q. Wu**, H. Liu, W. Xu, and H. Yuan, “Contact-Force Estimation from Structural Deformation in Compliant Fin-Ray Grippers via Co-Rotational Modeling and Surrogate Learning,” 2026 IEEE International Conference on Robotics and Biomimetics (IEEE ROBIO 2026). **Accepted.**
+- **[6]** **Q. Wu**, W. Xu, Jinguo Liu, and H. Yuan, “Data-Efficient Force Sensing for a Soft Robotic Finger via Two-Stage Physics–Data Fusion,” Measurement. **Revised.** (中科院3区，JCR Q1，SCI收录，IF=6.1)
 
 ## 发明专利
 
